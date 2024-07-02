@@ -1,6 +1,8 @@
+import 'package:chat_byte/view/AI_Doctor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -55,6 +57,9 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 5,right: 5),
               child: InkWell(
+                onTap: () {
+                Get.to(()=>AIDoctorPage());
+                },
                 child: Container(
                   width: double.infinity,
                   height: 630,
