@@ -406,7 +406,7 @@ class HomeScreen extends StatelessWidget {
                                       children: [
                                         Row(mainAxisAlignment: MainAxisAlignment.center,
                                           children: [
-                                            SizedBox(height: 150,child: Image.asset('assets/images/CHATBYTE.ai (1).png',fit: BoxFit.fill,)),
+                                            SizedBox(height: 150,child: Image.asset('assets/images/logo.png',fit: BoxFit.fill,)),
                                           ],
                                         ),
                                         Row(mainAxisAlignment: MainAxisAlignment.center,
