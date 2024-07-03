@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'generative_ai_service.dart';
 
 class AIDoctorPage extends StatefulWidget {
+  final Function(String, String) addHistory;
+
+  AIDoctorPage({required this.addHistory});
+
   @override
   _AIDoctorPageState createState() => _AIDoctorPageState();
 }
@@ -17,7 +21,7 @@ class _AIDoctorPageState extends State<AIDoctorPage> with TickerProviderStateMix
   @override
   void initState() {
     super.initState();
-    const apiKey = 'AIzaSyC7W-GxJPnQLsUiUqMjlpMGyioane1Md-8'; // Replace with your actual API key
+    const apiKey = 'AIzaSyC7W-GxJPnQLsUiUqMjlpMGyioane1Md-8'; 
     generativeAiService = GenerativeAiService(apiKey: apiKey);
   }
 
@@ -31,32 +35,35 @@ class _AIDoctorPageState extends State<AIDoctorPage> with TickerProviderStateMix
       final response = await generativeAiService.generateDiagnosis(command);
 
       setState(() {
-        _commands.insert(0, command); // Add the command to the list of commands
-        _responses.insert(0, ''); // Add a placeholder for the response
+        _commands.insert(0, command); 
+        _responses.insert(0, ''); 
 
-        _symptomsController.clear(); // Clear the text field after sending command
+        _symptomsController.clear(); 
         _isLoading = false;
       });
 
       _listKey.currentState?.insertItem(0);
 
-      // Simulate typing response line by line
       for (String line in response!.split('\n')) {
-        await Future.delayed(Duration(milliseconds: 100)); // Adjust delay as needed
+        await Future.delayed(Duration(milliseconds: 100)); 
         setState(() {
           _responses[0] += line + '\n';
         });
       }
+
+      widget.addHistory(command, response);
     } catch (e) {
       print('Failed to get diagnosis: $e');
       setState(() {
-        _commands.insert(0, _symptomsController.text); // Add the command to the list of commands
-        _responses.insert(0, 'Failed to get diagnosis'); // Add a default response
+        _commands.insert(0, _symptomsController.text); 
+        _responses.insert(0, 'Failed to get diagnosis'); 
         _symptomsController.clear();
         _isLoading = false;
       });
 
       _listKey.currentState?.insertItem(0);
+
+      widget.addHistory(_symptomsController.text, 'Failed to get diagnosis');
     }
   }
 
@@ -100,7 +107,7 @@ class _AIDoctorPageState extends State<AIDoctorPage> with TickerProviderStateMix
             Expanded(
               child: AnimatedList(
                 key: _listKey,
-                reverse: true, // Display the list in reverse order (newest at the bottom)
+                reverse: true, 
                 initialItemCount: _commands.length,
                 itemBuilder: (context, index, animation) {
                   return _buildItem(context, index, animation);
