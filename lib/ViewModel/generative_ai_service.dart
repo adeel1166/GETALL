@@ -13,4 +13,6 @@ class GenerativeAiService {
   }
 
   generateImage(String command) {}
+
+  generateEnvironmentalInfo(String query) {}
 }

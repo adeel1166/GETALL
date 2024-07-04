@@ -1,8 +1,7 @@
 import 'package:chat_byte/view/AI_Doctor.dart';
+import 'package:chat_byte/view/Save_Earth.dart';
 import 'package:chat_byte/view/history_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -131,6 +130,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             SizedBox(width: 8,),
                             Flexible(
                               child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                  builder: (context) => SaveEarthPage(addHistory: _addHistory),
+                                    ),
+                                     );
+                                    },
                                 child: Container(
                                   height: 200,
                                   width: 250,

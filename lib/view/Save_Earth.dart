@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import '../ViewModel/generative_ai_service.dart';
 
-class AIDoctorPage extends StatefulWidget {
+class SaveEarthPage extends StatefulWidget {
   final Function(String, String) addHistory;
 
-  AIDoctorPage({required this.addHistory});
+  SaveEarthPage({required this.addHistory});
 
   @override
   _AIDoctorPageState createState() => _AIDoctorPageState();
 }
 
-class _AIDoctorPageState extends State<AIDoctorPage> with TickerProviderStateMixin {
+class _AIDoctorPageState extends State<SaveEarthPage> with TickerProviderStateMixin {
   final TextEditingController _symptomsController = TextEditingController();
   List<String> _commands = [];
   List<String> _responses = [];
@@ -53,17 +53,17 @@ class _AIDoctorPageState extends State<AIDoctorPage> with TickerProviderStateMix
 
       widget.addHistory(command, response);
     } catch (e) {
-      print('Failed to get diagnosis: $e');
+      print('Failed to get environmental info: $e');
       setState(() {
         _commands.insert(0, _symptomsController.text); 
-        _responses.insert(0, 'Failed to get diagnosis'); 
+        _responses.insert(0, 'Failed to get environmental info'); 
         _symptomsController.clear();
         _isLoading = false;
       });
 
       _listKey.currentState?.insertItem(0);
 
-      widget.addHistory(_symptomsController.text, 'Failed to get diagnosis');
+      widget.addHistory(_symptomsController.text, 'Failed to get environmental info');
     }
   }
 
@@ -97,7 +97,7 @@ class _AIDoctorPageState extends State<AIDoctorPage> with TickerProviderStateMix
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AI Doctor'),
+        title: Text('Save Earth'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -120,7 +120,7 @@ class _AIDoctorPageState extends State<AIDoctorPage> with TickerProviderStateMix
                   child: TextField(
                     controller: _symptomsController,
                     decoration: InputDecoration(
-                      labelText: 'Enter your symptoms',
+                      labelText: 'Enter a query about climate change',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
