@@ -1,5 +1,6 @@
 import 'package:chat_byte/view/AI_Doctor.dart';
 import 'package:chat_byte/view/Chat_with_ai.dart';
+import 'package:chat_byte/view/Name_Genrator.dart';
 import 'package:chat_byte/view/Save_Earth.dart';
 import 'package:chat_byte/view/history_page.dart';
 import 'package:flutter/material.dart';
@@ -214,6 +215,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             SizedBox(width: 8,),
                             Flexible(
                               child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                  builder: (context) => NameGenrator(addHistory: _addHistory),
+                                    ),
+                                     );
+                                    },
                                 child: Container(
                                   height: 200,
                                   width: 250,
