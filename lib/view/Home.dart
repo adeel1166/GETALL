@@ -1,8 +1,8 @@
 import 'package:chat_byte/view/AI_Doctor.dart';
+import 'package:chat_byte/view/Chat_with_ai.dart';
 import 'package:chat_byte/view/Save_Earth.dart';
 import 'package:chat_byte/view/history_page.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
    HomeScreen({super.key});
@@ -174,6 +174,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             Flexible(
                               child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                  builder: (context) => AiChat(addHistory: _addHistory),
+                                    ),
+                                     );
+                                    },
                                 child: Container(
                                   height: 200,
                                   width: 250,
