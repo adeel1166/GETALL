@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       statusBarIconBrightness: Brightness.dark,
     ));
     return GetMaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       title: 'Chat Byte',
       theme: ThemeData(
         primarySwatch: Colors.blue,
