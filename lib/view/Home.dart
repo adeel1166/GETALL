@@ -6,6 +6,8 @@ import 'package:chat_byte/view/history_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  
+
    HomeScreen({super.key});
 
   @override
@@ -29,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
       _responses.clear();
     });
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -215,11 +218,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             SizedBox(width: 8,),
                             Flexible(
                               child: InkWell(
-                                onTap: () {
+                                  onTap: () {
                                   Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                  builder: (context) => NameGenrator(addHistory: _addHistory),
+                                  builder: (context) => AiChat(addHistory: _addHistory),
                                     ),
                                      );
                                     },
@@ -236,11 +239,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       SizedBox(height: 10,),
-                                      Image.asset('assets/images/Matching.png',),
+                                      Image.asset('assets/images/genrate image.png',),
                                       SizedBox(height: 10,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                        Text("AI Name Generator",style: TextStyle(
+                                        Text("AI Code Writer",style: TextStyle(
                                          fontWeight: FontWeight.w600,
                                          fontSize: 18,
                                          color: Colors.black
@@ -265,6 +268,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             Flexible(
                               child: InkWell(
+                                 onTap: () {
+                                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                  builder: (context) => AiChat(addHistory: _addHistory),
+                                    ),
+                                     );
+                                    },
                                 child: Container(
                                   height: 200,
                                   width: 250,
@@ -278,11 +289,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       SizedBox(height: 10,),
-                                      Image.asset('assets/images/genrate image.png',),
+                                      Image.asset('assets/images/Matching (1).png',),
                                       SizedBox(height: 10,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                        Text("AI Image Generator",style: TextStyle(
+                                        Text("AI Doc Matching",style: TextStyle(
                                          fontWeight: FontWeight.w600,
                                          fontSize: 18,
                                          color: Colors.black
@@ -297,6 +308,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             SizedBox(width: 8,),
                             Flexible(
                               child: InkWell(
+                                 onTap: () {
+                                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                  builder: (context) => AiChat(addHistory: _addHistory),
+                                    ),
+                                     );
+                                    },
                                 child: Container(
                                   height: 200,
                                   width: 250,
@@ -336,8 +355,20 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            
+
+
+
                             Flexible(
                               child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                  builder: (context) => NameGenrator(addHistory: _addHistory),
+                                    ),
+                                     );
+                                    },
                                 child: Container(
                                   height: 200,
                                   width: 250,
@@ -351,11 +382,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       SizedBox(height: 10,),
-                                      Image.asset('assets/images/Matching (2).png',),
+                                      Image.asset('assets/images/Matching.png',),
                                       SizedBox(height: 10,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                        Text("AI Image Matching",style: TextStyle(
+                                        Text("AI Name Generator",style: TextStyle(
                                          fontWeight: FontWeight.w600,
                                          fontSize: 18,
                                          color: Colors.black
@@ -367,79 +398,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            SizedBox(width: 8,),
-                            Flexible(
-                              child: InkWell(
-                                child: Container(
-                                  height: 200,
-                                  width: 250,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
-                                                          
-                                  ),
-                                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(height: 10,),
-                                      Image.asset('assets/images/Matching (1).png',),
-                                      SizedBox(height: 10,),
-                                      Row(mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                        Text("AI Doc Matching",style: TextStyle(
-                                         fontWeight: FontWeight.w600,
-                                         fontSize: 18,
-                                         color: Colors.black
-                                       ),)
-                                      ],
-                                      ),
-                                      ]
-                                      ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-              // 4                        
-                      SizedBox(height: 15,),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5,right: 5),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Flexible(
-                              child: InkWell(
-                                child: Container(
-                                  height: 200,
-                                  width: 250,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
-                                                          
-                                  ),
-                                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(height: 10,),
-                                      Image.asset('assets/images/scan image.png',),
-                                      SizedBox(height: 10,),
-                                      Row(mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                        Text("AI Image Scaner",style: TextStyle(
-                                         fontWeight: FontWeight.w600,
-                                         fontSize: 18,
-                                         color: Colors.black
-                                       ),)
-                                      ],
-                                      ),
-                                      ]
-                                      ),
-                                ),
-                              ),
-                            ),
+
+
+
+
                             SizedBox(width: 8,),
                             Flexible(
                               child: InkWell(
@@ -474,9 +436,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
+
+
                           ],
                         ),
-                      )
+                      ),
+              // 4                        
+                      
                     ],
                   )
                   ],
