@@ -6,6 +6,7 @@ import 'package:chat_byte/view/Save_Earth.dart';
 import 'package:chat_byte/view/code.dart';
 import 'package:chat_byte/view/history_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -112,21 +113,33 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Container(
                                   height: 200,
                                   width: 250,
-                                  clipBehavior: Clip.antiAlias,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
+                                    color: Color.fromARGB(31, 247, 121, 121),
+                                    border: Border.all(width: 1,color: Colors.white)
                                                           
                                   ),
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20,left: 10),
+                                        child: SizedBox(height: 80,width: 80,child: Image.asset('assets/images/doctor.png',)),
+                                      ),
                                       SizedBox(height: 20,),
-                                      Image.asset('assets/images/Your Personel AI DOCTOR.png',),
-                                      SizedBox(height: 10,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                      
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10,right: 10),
+                                          child: Text("Your Personel Ai Doctor",style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                          ),
+                                          maxLines: 2,
+                                          textAlign: TextAlign.center,),
+                                        ),
+                                      )
                                       ],
                                       ),
                                       ]
@@ -145,24 +158,38 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                      );
                                     },
+//save earth                                    
                                 child: Container(
                                   height: 200,
                                   width: 250,
                                   clipBehavior: Clip.antiAlias,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
+                                    color: Color.fromARGB(33, 115, 241, 147),
+                                    border: Border.all(width: 1,color: Colors.white)
                                                           
                                   ),
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20,left: 10),
+                                        child: SizedBox(height: 80,width: 80,child: Image.asset('assets/images/climate-change.png',)),
+                                      ),
                                       SizedBox(height: 20,),
-                                      Image.asset('assets/images/Your Personel AI DOCTOR (1).png',),
-                                      SizedBox(height: 10,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                      
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10,right: 10),
+                                          child: Text("Save Earth with Ai",style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                          ),
+                                          maxLines: 2,
+                                          textAlign: TextAlign.center,),
+                                        ),
+                                      )
                                       ],
                                       ),
                                       ]
@@ -179,45 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Flexible(
-                              child: InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                  builder: (context) => AiChat(addHistory: _addHistory),
-                                    ),
-                                     );
-                                    },
-                                child: Container(
-                                  height: 200,
-                                  width: 250,
-                                  clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
-                                                          
-                                  ),
-                                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(height: 10,),
-                                      Image.asset('assets/images/chat.png',),
-                                      SizedBox(height: 10,),
-                                      Row(mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                        Text("Chat with AI",style: TextStyle(
-                                         fontWeight: FontWeight.w600,
-                                         fontSize: 18,
-                                         color: Colors.black
-                                       ),)
-                                      ],
-                                      ),
-                                      ]
-                                      ),
-                                ),
-                              ),
-                            ),
+                            
                             SizedBox(width: 8,),
                             Flexible(
                               child: InkWell(
@@ -229,28 +218,88 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                      );
                                     },
+//ai code                                    
                                 child: Container(
                                   height: 200,
                                   width: 250,
                                   clipBehavior: Clip.antiAlias,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
+                                    color: Color.fromARGB(31, 247, 121, 121),
+                                    border: Border.all(width: 1,color: Colors.white)
                                                           
                                   ),
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      SizedBox(height: 10,),
-                                      Image.asset('assets/images/genrate image.png',),
-                                      SizedBox(height: 10,),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20,left: 10),
+                                        child: SizedBox(height: 80,width: 80,child: Image.asset('assets/images/coding.png',)),
+                                      ),
+                                      SizedBox(height: 20,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                        Text("AI Code Writer",style: TextStyle(
-                                         fontWeight: FontWeight.w600,
-                                         fontSize: 18,
-                                         color: Colors.black
-                                       ),)
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10,right: 10),
+                                          child: Text("Coding with Ai",style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                          ),
+                                          maxLines: 2,
+                                          textAlign: TextAlign.center,),
+                                        ),
+                                      )
+                                      ],
+                                      ),
+                                      ]
+                                      ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 8,),
+                            Flexible(
+                              child: InkWell(
+                                 onTap: () {
+                                  Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                  builder: (context) => AiChat(addHistory: _addHistory),
+                                    ),
+                                     );
+                                    },
+//math                                    
+                                child: Container(
+                                  height: 200,
+                                  width: 250,
+                                  clipBehavior: Clip.antiAlias,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    color: Color.fromARGB(33, 115, 241, 147),
+                                    border: Border.all(width: 1,color: Colors.white)
+                                                          
+                                  ),
+                                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20,left: 10),
+                                        child: SizedBox(height: 80,width: 80,child: Image.asset('assets/images/math.png',)),
+                                      ),
+                                      SizedBox(height: 20,),
+                                      Row(mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10,right: 10),
+                                          child: Text("Solve Your Math With Ai",style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                          ),
+                                          maxLines: 2,
+                                          textAlign: TextAlign.center,),
+                                        ),
+                                      )
                                       ],
                                       ),
                                       ]
@@ -269,38 +318,48 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Flexible(
+                             Flexible(
                               child: InkWell(
-                                 onTap: () {
+                                onTap: () {
                                   Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                  builder: (context) => AiChat(addHistory: _addHistory),
+                                  builder: (context) => NameGenrator(addHistory: _addHistory),
                                     ),
                                      );
                                     },
+//name gen                                    
                                 child: Container(
                                   height: 200,
                                   width: 250,
                                   clipBehavior: Clip.antiAlias,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
+                                    color: Color.fromARGB(31, 247, 121, 121),
+                                    border: Border.all(width: 1,color: Colors.white)
                                                           
                                   ),
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      SizedBox(height: 10,),
-                                      Image.asset('assets/images/Matching (1).png',),
-                                      SizedBox(height: 10,),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20,left: 10),
+                                        child: SizedBox(height: 80,width: 80,child: Image.asset('assets/images/signature.png',fit: BoxFit.cover,)),
+                                      ),
+                                      SizedBox(height: 20,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                        Text("AI Doc Matching",style: TextStyle(
-                                         fontWeight: FontWeight.w600,
-                                         fontSize: 18,
-                                         color: Colors.black
-                                       ),)
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10,right: 10),
+                                          child: Text("Ai Name Generator",style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                          ),
+                                          maxLines: 2,
+                                          textAlign: TextAlign.center,),
+                                        ),
+                                      )
                                       ],
                                       ),
                                       ]
@@ -319,28 +378,38 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                      );
                                     },
+//ai document                                    
                                 child: Container(
                                   height: 200,
                                   width: 250,
                                   clipBehavior: Clip.antiAlias,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
+                                    color: Color.fromARGB(33, 115, 241, 147),
+                                    border: Border.all(width: 1,color: Colors.white)
                                                           
                                   ),
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      SizedBox(height: 10,),
-                                      Image.asset('assets/images/writedocument.png',),
-                                      SizedBox(height: 10,),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20,left: 10),
+                                        child: SizedBox(height: 80,width: 80,child: Image.asset('assets/images/ai-file.png',)),
+                                      ),
+                                      SizedBox(height: 20,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                        Text("AI Document Writer",style: TextStyle(
-                                         fontWeight: FontWeight.w600,
-                                         fontSize: 18,
-                                         color: Colors.black
-                                       ),)
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10,right: 10),
+                                          child: Text("Ai Documents Writter",style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                          ),
+                                          maxLines: 2,
+                                          textAlign: TextAlign.center,),
+                                        ),
+                                      )
                                       ],
                                       ),
                                       ]
@@ -358,42 +427,48 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            
-
-
-
                             Flexible(
                               child: InkWell(
                                 onTap: () {
                                   Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                  builder: (context) => NameGenrator(addHistory: _addHistory),
+                                  builder: (context) => AiChat(addHistory: _addHistory),
                                     ),
                                      );
                                     },
+//chat ai                                    
                                 child: Container(
                                   height: 200,
                                   width: 250,
                                   clipBehavior: Clip.antiAlias,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
+                                    color: Color.fromARGB(31, 247, 121, 121),
+                                    border: Border.all(width: 1,color: Colors.white)
                                                           
                                   ),
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      SizedBox(height: 10,),
-                                      Image.asset('assets/images/Matching.png',),
-                                      SizedBox(height: 10,),
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20,left: 10),
+                                        child: SizedBox(height: 80,width: 80,child: Image.asset('assets/images/chatico.png',)),
+                                      ),
+                                      SizedBox(height: 20,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                        Text("AI Name Generator",style: TextStyle(
-                                         fontWeight: FontWeight.w600,
-                                         fontSize: 18,
-                                         color: Colors.black
-                                       ),)
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10,right: 10),
+                                          child: Text("Chat with Ai",style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                          ),
+                                          maxLines: 2,
+                                          textAlign: TextAlign.center,),
+                                        ),
+                                      )
                                       ],
                                       ),
                                       ]
@@ -401,40 +476,44 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-
-
-
-
                             SizedBox(width: 8,),
                             Flexible(
                               child: InkWell(
                                 onTap: () {
                                   Get.to(()=>AboutUsPage());
                                 },
+//about us                                
                                 child: Container(
                                   height: 200,
                                   width: 250,
                                   clipBehavior: Clip.antiAlias,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
-                                    color: Colors.white,
-                                    border: Border.all(width: 1,color: Colors.black)
+                                    color: Color.fromARGB(33, 115, 241, 147),
+                                    border: Border.all(width: 1,color: Colors.white)
                                                           
                                   ),
                                   child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Row(mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          SizedBox(height: 150,child: Image.asset('assets/images/logo.png',fit: BoxFit.fill,)),
-                                        ],
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 20,left: 10),
+                                        child: SizedBox(height: 80,width: 80,child: Image.asset('assets/images/logo.png',fit: BoxFit.cover,)),
                                       ),
+                                      SizedBox(height: 20,),
                                       Row(mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                        Text("About Us",style: TextStyle(
-                                         fontWeight: FontWeight.w600,
-                                         fontSize: 18,
-                                         color: Colors.black
-                                       ),)
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10,right: 10),
+                                          child: Text("About Us",style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black
+                                          ),
+                                          maxLines: 2,
+                                          textAlign: TextAlign.center,),
+                                        ),
+                                      )
                                       ],
                                       ),
                                       ]
