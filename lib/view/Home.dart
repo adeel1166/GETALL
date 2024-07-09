@@ -3,6 +3,7 @@ import 'package:chat_byte/view/AboutUs.dart';
 import 'package:chat_byte/view/Chat_with_ai.dart';
 import 'package:chat_byte/view/Name_Genrator.dart';
 import 'package:chat_byte/view/Save_Earth.dart';
+import 'package:chat_byte/view/ai_mathematician.dart';
 import 'package:chat_byte/view/code.dart';
 import 'package:chat_byte/view/history_page.dart';
 import 'package:flutter/material.dart';
@@ -41,8 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Stack(
-        children: [
+      body: SingleChildScrollView(
+        
+        child: 
           Column(
           children: [
             SizedBox(height: 35,),
@@ -61,25 +63,27 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 30,),
             Padding(
               padding: const EdgeInsets.only(left: 20),
-              child: Row(
+              child: Row(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Welcome Back to",style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 18,
                     color: Colors.black
-                  ),)
+                  ),
+                  textAlign: TextAlign.center,)
                 ],
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20),
-              child: Row(
+              child: Row(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Chat Byte",style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 22,
                     color: Colors.black
-                  ),)
+                  ),
+                  textAlign: TextAlign.center,)
                 ],
               ),
             ),
@@ -88,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.only(left: 5,right: 5),
               child: Container(
                 width: double.infinity,
-                height: 630,
+                height: 660,
                 color: Colors.white,
                 child: ListView(
                   scrollDirection: Axis.vertical,
@@ -264,7 +268,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                  builder: (context) => AiChat(addHistory: _addHistory),
+                                  builder: (context) => AiMathematician(addHistory: _addHistory),
                                     ),
                                      );
                                     },
@@ -533,13 +537,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-            )
-          ],
-          ),
-          Positioned(bottom: 0,
-          left: 50,
-          right: 50,
-          child: SizedBox(
+            ),
+            SizedBox(
             height: 50,
             width: 300,
             child: Row(
@@ -582,8 +581,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           )
-          )
-        ],
+          ],
+          ),
+          
+        
       ),
     );
   }
