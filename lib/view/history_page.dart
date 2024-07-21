@@ -1,4 +1,4 @@
-import 'package:chat_byte/view/Home.dart';
+import 'package:getall/view/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

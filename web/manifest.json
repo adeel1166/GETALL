@@ -1,6 +1,6 @@
 {
-    "name": "chat_byte",
-    "short_name": "chat_byte",
+    "name": "getall",
+    "short_name": "getall",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

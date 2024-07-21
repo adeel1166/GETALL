@@ -1,4 +1,4 @@
-package com.example.chat_byte
+package com.example.getall
 
 import io.flutter.embedding.android.FlutterActivity
 

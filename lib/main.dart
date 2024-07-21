@@ -1,4 +1,4 @@
-import 'package:chat_byte/view/Home.dart';
+import 'package:getall/view/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     ));
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Chat Byte',
+      title: 'GETALL',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

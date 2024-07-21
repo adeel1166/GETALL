@@ -53,7 +53,7 @@ class _AIDoctorPageState extends State<AiMathematician> with TickerProviderState
 
       widget.addHistory(command, response);
     } catch (e) {
-      print('Message Chat Byte: $e');
+      print('Message GETALL: $e');
       setState(() {
         _commands.insert(0, _symptomsController.text); 
         _responses.insert(0, 'Failed to get response'); 
