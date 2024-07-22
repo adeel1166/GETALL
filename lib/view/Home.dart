@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
     var isLargeScreen = screenWidth > 600;
 
     return Scaffold(
-      backgroundColor: Color.fromRGBO(139, 173, 163, 1),
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           Column(
@@ -84,7 +84,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Row(
                           children: [
-                            SizedBox(height: 60,width: 120,child: Image.asset('assets/images/image.png'))
+                            Text(
+                              "GETALL",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: isLargeScreen ? 28 : 24,
+                                color: Colors.black,
+                                fontFamily: 'GetVoIPGrotesque'
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
                           ],
                         ),
                       ),
@@ -92,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 5),
                         child: Container(
                           width: double.infinity,
-                          height: screenHeight - 300,
+                          height: screenHeight - 200,
                           color: Colors.transparent,
                           child: ListView(
                             scrollDirection: Axis.vertical,
@@ -189,8 +198,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                     ),
                                     
-                                    "About Us",
-                                    'assets/images/GetAllLogo.png',
+                                    "GETALL",
+                                    'assets/images/Untitled_design__1_-removebg-preview.png',
                                    Colors.transparent,
                                     () => Get.to(() => AboutUsPage()),
                                   ),
@@ -208,10 +217,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Positioned(
             bottom: 20,
-            left: 0,
-            right: 0,
+            left: 70,
+            right: 70,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Image.asset(
                   'assets/images/home.png',
@@ -294,18 +303,22 @@ class _HomeScreenState extends State<HomeScreen> {
           width: isLargeScreen ? 300 : 250,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(0),
-            color: color,
-            border: Border.all(width: 5, color: Color.fromRGBO(64, 89, 82, 1)),
+            borderRadius: BorderRadius.circular(20),
+            color: Color.fromRGBO(245, 245, 245, 1),
+            // border: Border.all(width: 0, color: Color.fromRGBO(64, 89, 82, 1)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 20, left: 10),
-                child: SizedBox(
+                child: Container(
                   height: isLargeScreen ? 100 : 80,
                   width: isLargeScreen ? 100 : 80,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    //  color: Color.fromRGBO(230, 230, 230, 1),
+                  ),
                   child: Image.asset(imagePath, fit: BoxFit.cover),
                 ),
               ),

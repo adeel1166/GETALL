@@ -4,10 +4,10 @@ class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(139, 173, 163, 1),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-              backgroundColor: Color.fromRGBO(139, 173, 163, 1),
-        title: Text('About Us'),
+              backgroundColor: Colors.white,
+        title: Text('About Us',style: TextStyle(fontFamily:'GetVoIPGrotesque' ),),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

@@ -96,7 +96,9 @@ class _AIDoctorPageState extends State<AiChat> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text('Chat With AI'),
       ),
       body: Padding(
@@ -122,7 +124,7 @@ class _AIDoctorPageState extends State<AiChat> with TickerProviderStateMixin {
                     decoration: InputDecoration(
                       labelText: 'Enter your Message',
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                     maxLines: 1,
@@ -131,7 +133,10 @@ class _AIDoctorPageState extends State<AiChat> with TickerProviderStateMixin {
                 SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: _getDiagnosis,
-                  child: _isLoading ? CircularProgressIndicator() : Icon(Icons.send),
+                  child: _isLoading ? CircularProgressIndicator() : Icon(Icons.send,color: Colors.black,),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                  ),
                 ),
               ],
             ),

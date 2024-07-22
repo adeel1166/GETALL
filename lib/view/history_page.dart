@@ -39,7 +39,9 @@ class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text('History'),
       ),
       body: Padding(
@@ -76,6 +78,15 @@ class _HistoryPageState extends State<HistoryPage> {
             ElevatedButton(
               onPressed: _clearHistory,
               child: Text('Clear History',style: TextStyle(color: Colors.black),),
+              style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+    RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10),
+      side: BorderSide(color: Colors.white)
+    )
+  )
+                  ),
             ),
             // Spacer(),
             SizedBox(
