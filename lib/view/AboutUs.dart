@@ -43,7 +43,7 @@ class AboutUsPage extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'Developed by GETALL',
+              'Developed by ByteWiz Soft',
               style: TextStyle(fontSize: 18, fontStyle: FontStyle.italic,fontFamily: 'GetVoIPGrotesque'),
             ),
             SizedBox(height: 8),

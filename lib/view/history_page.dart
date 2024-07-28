@@ -92,37 +92,42 @@ class _HistoryPageState extends State<HistoryPage> {
             SizedBox(
             height: 50,
             width: 300,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                   InkWell(
-                    onTap: () {
-                      Get.to(()=>HomeScreen());
-                    },
-                     child: Container(
-                      height: 25,
-                      width: 25,
-                      child: Image.asset('assets/images/home.png'),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10,right: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                     InkWell(
+                      onTap: () {
+                        Get.to(()=>HomeScreen());
+                      },
+                       child: Container(
+                        height: 25,
+                        width: 25,
+                        child: Icon(Icons.home_outlined,size: 35,),
+                       ),
                      ),
-                   ),
-                InkWell(
-                  
-                  child: Container(
+                     SizedBox(width: 40,),
+                  InkWell(
+                    
+                    child: Container(
+                        height: 25,
+                        width: 25,
+                        // color: Colors.black,
+                        child: Icon(Icons.history_outlined,size: 35,),
+                      
+                    ),
+                  ),
+                  SizedBox(width: 40,),
+                  Container(
                       height: 25,
                       width: 25,
                       // color: Colors.black,
-                      child: Image.asset('assets/images/history.png'),
+                      child: Icon(Icons.person_outlined,size: 35,),
                     
                   ),
-                ),
-                Container(
-                    height: 25,
-                    width: 25,
-                    // color: Colors.black,
-                    child: Image.asset('assets/images/profile.png'),
-                  
-                ),
-              ],
+                ],
+              ),
             ),
           )
           ],

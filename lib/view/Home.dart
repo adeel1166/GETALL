@@ -216,17 +216,13 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           Positioned(
-            bottom: 20,
+            bottom: 10,
             left: 70,
             right: 70,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Image.asset(
-                  'assets/images/home.png',
-                  height: 25,
-                  width: 25,
-                ),
+                Icon(Icons.home_outlined,size: 35,),
                 SizedBox(width: 40),
                 InkWell(
                   onTap: () {
@@ -241,18 +237,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     );
                   },
-                  child: Image.asset(
-                    'assets/images/history.png',
-                    height: 25,
-                    width: 25,
-                  ),
+                  child: Icon(Icons.history_outlined,size: 35,),
                 ),
                 SizedBox(width: 40),
-                Image.asset(
-                  'assets/images/profile.png',
-                  height: 25,
-                  width: 25,
-                ),
+                Icon(Icons.person_outlined,size: 35,),
               ],
             ),
           ),

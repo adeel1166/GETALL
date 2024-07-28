@@ -21,7 +21,7 @@ class _AIDoctorPageState extends State<SaveEarthPage> with TickerProviderStateMi
   @override
   void initState() {
     super.initState();
-    const apiKey = 'AIzaSyC7W-GxJPnQLsUiUqMjlpMGyioane1Md-8'; 
+    const apiKey = 'AIzaSyDL_1REPfeymLRf6yX3kOF6hcHABxMJd0I'; 
     generativeAiService = GenerativeAiService(apiKey: apiKey);
   }
 
@@ -123,17 +123,23 @@ class _AIDoctorPageState extends State<SaveEarthPage> with TickerProviderStateMi
                     controller: _symptomsController,
                     decoration: InputDecoration(
                       labelText: 'Enter a query about climate change',
+                      labelStyle: TextStyle(color: Colors.black),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
+                    cursorColor: Colors.black,
                     maxLines: 1,
                   ),
                 ),
                 SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: _getDiagnosis,
-                  child: _isLoading ? CircularProgressIndicator() : Icon(Icons.send,color: Colors.black,),
+                  child: _isLoading ? CircularProgressIndicator(color: Colors.black) : Icon(Icons.send,color: Colors.black,),
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                   ),
